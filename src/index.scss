@@ -1,0 +1,12 @@
+@import "./assets/scss/abstract/mixins.scss";
+@import "./assets/scss/abstract/variables.scss";
+
+@import "./assets/scss/base/animation.scss";
+@import "./assets/scss/base/base.scss";
+@import "./assets/scss/base/typography.scss";
+
+@import "./assets/scss/components/buttons.scss";
+
+* {
+  box-sizing: border-box;
+}
