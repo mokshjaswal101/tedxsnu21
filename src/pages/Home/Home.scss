@@ -1,0 +1,136 @@
+.home {
+  .heading-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    .time {
+      display: flex;
+      text-align: center;
+      margin-bottom: 6rem;
+      color: black;
+      justify-content: space-evenly;
+
+      .days,
+      .hours,
+      .minutes,
+      .seconds {
+        flex: 0 0 21%;
+        font-size: 10rem;
+        font-weight: bold;
+
+        span {
+          display: block;
+          font-size: 1.2rem;
+          font-weight: normal;
+        }
+      }
+
+      .colon {
+        flex: 0 0 5%;
+        font-size: 10rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .section-theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+
+      .about-theme {
+        flex: 0 0 40%;
+      }
+
+      .image-theme-container {
+        flex: 0 0 50%;
+        border-radius: 4rem;
+        background-image: linear-gradient(
+          to left,
+          var(--color-secondary),
+          var(--color-primary)
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 10rem;
+      }
+    }
+  }
+
+  .section-artist {
+    display: flex;
+    justify-content: center;
+    margin: 15rem 0;
+
+    .container {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+
+      .image-artist-container {
+        flex: 0 0 55%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .about-artist {
+        flex: 0 0 40%;
+        background-color: var(--color-primary);
+        border-radius: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 5rem;
+        color: white;
+
+        h2 {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .section-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
+
+    .container {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+
+      .about-ted {
+        flex: 0 0 40%;
+      }
+
+      .about-tedx {
+        flex: 0 0 40%;
+      }
+
+      .about-divider-image {
+        flex: 0 0 20%;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

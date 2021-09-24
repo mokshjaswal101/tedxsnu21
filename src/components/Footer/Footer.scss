@@ -1,0 +1,54 @@
+.footer {
+  padding-bottom: 6rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .footer-top {
+    width: 100%;
+    margin-bottom: 7rem;
+  }
+
+  .container {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+
+    .tedx-info {
+      flex: 0 0 20%;
+
+      .footer-logo {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .socials {
+        margin: 2rem 0;
+
+        i {
+          margin-right: 2rem;
+          font-size: 2.5rem;
+          color: var(--color-grey);
+        }
+      }
+    }
+
+    .about,
+    .performers,
+    .past {
+      span {
+        display: block;
+        margin-bottom: 1.5rem;
+
+        &:last-of-type {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
