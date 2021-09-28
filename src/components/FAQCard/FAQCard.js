@@ -14,20 +14,20 @@ export default function FAQCard({ question, answer }) {
           <img alt="arrow" src={arrow} />
         </motion.div>
         {isOpen && (
-          <motion.div
+          <motion.p
             key="answer"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
               transition: {
-                duration: 0.5,
+                duration: 1,
               },
             }}
             exit={{ opacity: 0 }}
             className="answer"
           >
-            <p>{answer === "" ? p : answer}</p>
-          </motion.div>
+            {answer === "" ? p : answer}
+          </motion.p>
         )}
       </AnimatePresence>
     </motion.div>

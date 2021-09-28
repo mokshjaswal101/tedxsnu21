@@ -5,13 +5,17 @@ const FAQ = () => {
   return (
     <>
       <main className="main">
-        <section>
+        <article>
           <h1>Frequently Asked Questions</h1>
           <hr />
-          {FAQs.map((item) => (
-            <FAQCard question={item.question} answer={item.answer} />
+          {FAQs.map((item, index) => (
+            <FAQCard
+              key={index}
+              question={item.question}
+              answer={item.answer}
+            />
           ))}
-        </section>
+        </article>
       </main>
     </>
   );
