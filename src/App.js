@@ -10,20 +10,22 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Conference from "./pages/Conference/Conference";
 import Contact from "./pages/Contact/Contact";
+import FAQ from "./pages/FAQ/FAQ";
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <Navbar />
       <Router>
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route exact path="/conference" component={Conference}></Route>
           <Route exact path="/contact" component={Contact}></Route>
+          <Route exact path="/faq" component={FAQ}></Route>
         </Switch>
       </Router>
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
 
