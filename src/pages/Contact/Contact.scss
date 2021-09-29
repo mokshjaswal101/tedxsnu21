@@ -1,0 +1,155 @@
+$bp-large: 62.5em; // 1000px -> 1000px/16
+$bp-medium: 45.6em; //730px -> 730px/16
+$bp-small: 37.5em; //600px -> 600px/16
+
+.container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+.contactPage {
+    display: grid;
+
+    grid-template-rows: min-content .75fr 1fr ;
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: min-content .75fr 1fr ;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-row-gap: 3rem;
+    }
+
+    padding: 15rem 0 10rem 0;
+    //justify-content: center;
+       
+
+        &__heading {
+            width: 80%;
+            justify-self: center;
+
+            &__title {
+                font-size: 2rem;
+                
+            }
+
+            &__para {
+                
+                font-size: 1.2rem;
+                width: 100%;
+            }
+            
+        }
+
+        &__map {
+            justify-self: center;
+            align-self: center;
+            padding: 3rem;
+
+            &__title {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            &__embedded {
+                margin-top: 2rem;
+                border-radius: 50px;
+                border: 0;
+                height: 40rem;
+                width: 50rem;
+                box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, 0.356) ;
+
+                @media only screen and (max-width: $bp-small) {
+                    height: 30rem;
+                    width: 40rem;
+                }
+            }
+        }
+
+        &__form {
+            display: grid;
+            grid-template-columns: repeat(2, .5fr);
+            grid-column-gap: 4rem;
+            justify-self: center;
+
+            @media only screen and (max-width: $bp-medium) {
+                grid-template-columns: 1fr;
+            }
+
+            &__embedded {
+
+                display: grid;
+                grid-template-rows: repeat(2, min-content);               
+         
+
+                &__title {
+                    justify-self: center;
+                    font-size: 1.5rem;
+                }
+    
+                &__form-link {
+                    align-self: center;
+                    width: 65rem;
+                    height: 95rem;
+                    margin-top: 2rem;
+
+                    box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, 0.356) ;
+                    
+                    @media only screen and (max-width: $bp-large) {
+                        width: 55rem;
+                        height: 80rem;
+                    }
+
+                    @media only screen and (max-width: $bp-medium) {
+                        width: 45rem;
+                        height: 60rem;
+                    }
+
+                    @media only screen and (max-width: $bp-small) {
+                        width: 40rem;
+                        height: 55rem;
+                    }
+                    
+                }
+
+            }
+
+            &__about {
+                align-self: center;
+                margin-left: 5rem;
+
+                @media only screen and (max-width: $bp-medium) {
+                    display: none;
+                }
+
+                &__text1 {
+                    font-size: 1.4rem;
+                }
+
+                &__links {
+                    list-style: none;
+                    font-size: 1.4rem;
+                    
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+
+                    li {
+                        padding: 1.2rem 2rem;
+                        
+                    }
+                }
+
+                &__text2 {
+                    font-size: 1.4rem;
+                }
+
+            }
+        }
+
+
+
+
+}
