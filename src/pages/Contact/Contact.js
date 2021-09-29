@@ -25,9 +25,40 @@ const Contact = () => {
         <div className="contactPage__form">
 
           <div className="contactPage__form__embedded">
-            <div className="contactPage__form__embedded__title">Quick Message (form here)</div>            
-            <div>
-            <iframe className="contactPage__form__embedded__form-link" title="TEDxShivNadarUniversity form" src="https://docs.google.com/forms/d/e/1FAIpQLSexkONeCtyEPd_zXVKhU9UkAFlr1yOTk9XbHLaIn72jdJmDFg/viewform?embedded=true" overflow="hidden" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>            
+            <div className="contactPage__form__embedded__title"></div>            
+            <div className="contactPage__form__embedded__form-link">
+            <div class="form-item">
+                <div class="contact">
+                <h2 class="heading--2">Connect with us</h2>
+
+                <form action="" method="POST">
+                    <div class="wrapper">
+                        <div class="wrapper__box">
+                            <input type="text" class="input" name="name" id="name" required/>
+                            <label for="name" class="label">Name</label>
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="wrapper__box">
+                            <input type="email" class="input" name="email" id="email" required/>
+                            <label for="email" class="label">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="wrapper__box">
+                            <textarea type="text" class="input" name="message" id="message" required></textarea>
+                            <label for="message" class="label">Description</label>
+                        </div>
+                   </div>
+
+                <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+    </div>
+            </div>
+                        
             </div>
 
           <div className="contactPage__form__about">
