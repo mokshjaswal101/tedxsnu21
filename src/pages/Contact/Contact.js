@@ -4,8 +4,8 @@ import "./Contact.scss";
 
 const Contact = () => {
   return (
-    <main className="container">
-      <section className="contactPage">
+    <section className="container">
+      <div className="contactPage">
         <div className="contactPage__heading">
           <h2 className="contactPage__heading__title">Contact Us</h2>
           <p className="contactPage__heading__para">
@@ -73,8 +73,8 @@ const Contact = () => {
           </div>
           </div>
         </div>
-        </section>
-    </main>
+        </div>
+    </section>
   );
 };
 
