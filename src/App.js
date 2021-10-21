@@ -8,22 +8,20 @@ import Footer from "./components/Footer/Footer";
 
 //pages
 import Home from "./pages/Home/Home";
-import Conference from "./pages/Conference/Conference";
-import Contact from "./pages/Contact/Contact";
+import Qissa from "./pages/Qissa/Qissa";
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <Navbar />
       <Router>
         <Switch>
           <Route exact path="/" component={Home}></Route>
-          <Route exact path="/conference" component={Conference}></Route>
-          <Route exact path="/contact" component={Contact}></Route>
+          <Route exact path="/qissa" component={Qissa}></Route>
         </Switch>
       </Router>
-      <Footer />
-    </React.Fragment>
+      {/* <Footer /> */}
+    </>
   );
 }
 

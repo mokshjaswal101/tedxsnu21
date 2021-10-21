@@ -1,34 +1,162 @@
+@import "../../assets/scss/abstract/mixins.scss";
+
 .navbar {
   display: flex;
-  justify-content: space-between;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
-  padding: 2rem 15rem;
   width: 100%;
-  position: absolute;
-  // border-bottom: 1px solid rgb(241, 241, 241);
+  position: fixed;
+  background-color: white;
+  padding: 2rem 0;
+  z-index: 1000;
 
-  .logo {
-    flex: 0 1 22%;
+  .nav-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    img {
-      width: 100%;
+    @include respond(1150px) {
+      width: 90%;
     }
-  }
 
-  .navbar-menu {
-    list-style: none;
-    justify-self: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    .navbar-logo {
+      flex: 0 0.5 22%;
 
-    li {
-      display: inline-block;
-      margin: 0 2rem;
-      font-size: 1.7rem;
+      @include respond(820px) {
+        flex: 0 0.5 50%;
+      }
+
+      @include respond(620px) {
+        flex: 0 0.5 70%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .navbar-menu {
+      flex-shrink: 1;
+      transition: 0.4s;
+
+      @include respond(820px) {
+        position: absolute;
+        left: -150%;
+        background-color: var(--color-black-light);
+        width: 100vw;
+        top: 0;
+        z-index: 1000;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 500;
+      }
+
+      ul {
+        list-style: none;
+        @include respond(820px) {
+          text-align: center;
+          padding: 0;
+        }
+
+        li {
+          display: inline-block;
+          margin: 0 1.3rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            color: var(--color-secondary);
+          }
+
+          @include respond(960px) {
+            margin: 0 0.9rem;
+            font-size: 1.6rem;
+          }
+
+          @include respond(820px) {
+            display: block;
+            color: white;
+            margin: 2rem 0;
+            font-size: 3rem;
+          }
+        }
+
+        #navbar-tickets {
+          color: var(--color-secondary);
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .navbar-menu.navbar-menu-mobile {
+      left: 0;
+    }
+
+    .navbar-mobile {
+      height: 40px;
+      background-color: white;
+      border: none;
       cursor: pointer;
+      display: none;
+
+      @include respond(820px) {
+        display: block;
+      }
+
+      .navbar-hamburger {
+        z-index: 2000;
+        transition: all 0.3s;
+        & {
+          position: relative;
+
+          &,
+          &::after,
+          &::before {
+            width: 3.5rem;
+            height: 3px;
+            background-color: var(--color-black-light);
+            display: inline-block;
+            transition: all 0.2s;
+          }
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+          }
+
+          &::before {
+            top: -0.8rem;
+          }
+          &::after {
+            top: 0.8rem;
+          }
+        }
+      }
+
+      .navbar-cross.navbar-hamburger {
+        & {
+          background-color: transparent;
+        }
+
+        &:before {
+          transform: rotate(135deg);
+          top: 0;
+          background-color: white;
+        }
+
+        &:after {
+          transform: rotate(-135deg);
+          top: 0;
+          background-color: white;
+        }
+      }
     }
   }
 }
