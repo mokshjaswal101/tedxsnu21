@@ -5,8 +5,6 @@
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    border-radius: 10rem;
-    padding: 1.3rem 3rem;
     transition: all 0.2s;
     border: none;
     outline: none;
@@ -17,18 +15,17 @@
   }
 
   &-primary {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: white;
     box-shadow: 0 5px 5px var(--color-primary-dark);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    padding: 1.5rem 3.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
 
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 7px 7px var(--color-primary-dark);
     }
-  }
-
-  &-header {
-    padding: 1.3rem 8rem;
   }
 }

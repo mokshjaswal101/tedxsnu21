@@ -1,0 +1,39 @@
+.faq-main {
+  display: flex;
+  padding-top: 10rem;
+  transition: all 0.4s;
+
+  .faq-information {
+    flex: 0 0 30%;
+
+    h1 {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0 2rem;
+
+      li {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: bold;
+
+        &:hover {
+          color: var(--color-secondary);
+        }
+      }
+
+      .active {
+        color: var(--color-secondary);
+      }
+    }
+  }
+
+  .faq-questions {
+    flex: 0 0 70%;
+    transition: all 0.4s;
+  }
+}

@@ -1,0 +1,14 @@
+.aboutTed-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+  margin-top: 10rem;
+
+  .aboutTed {
+    flex: 0 0 48%;
+  }
+
+  .aboutTedx {
+    flex: 0 0 48%;
+  }
+}

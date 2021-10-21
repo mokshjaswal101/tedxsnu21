@@ -1,0 +1,86 @@
+@import "../../assets/scss//abstract/mixins.scss";
+
+.section-title {
+  position: relative;
+  padding: 22rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  align-self: flex-end;
+  margin-right: 15rem;
+
+  @include respond(700px) {
+    margin-right: 5rem;
+  }
+
+  .border-circle {
+    padding: 55rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-30%, -20%);
+
+    @include respond(1150px) {
+      padding: 52rem;
+    }
+
+    @include respond(900px) {
+      padding: 50rem;
+      transform: translate(-25%, -15%);
+    }
+
+    // @include respond(750px) {
+    //   display: none;
+    // }
+  }
+
+  img {
+    width: 40rem;
+    margin-bottom: 3rem;
+
+    @include respond(500px) {
+      width: 30rem;
+    }
+  }
+
+  .time {
+    display: flex;
+    text-align: center;
+    color: var(--color-black-light);
+    justify-content: space-evenly;
+
+    .days,
+    .hours,
+    .minutes,
+    .seconds {
+      flex: 0 0 21%;
+      font-size: 7rem;
+      font-weight: normal;
+
+      @include respond(820px) {
+        font-size: 5rem;
+      }
+
+      span {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .colon {
+      flex: 0 0 5%;
+      font-size: 7rem;
+      font-weight: normal;
+      @include respond(820px) {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  .title-btn {
+    margin-top: 4rem;
+  }
+}
