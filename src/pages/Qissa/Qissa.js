@@ -2,9 +2,15 @@ import React, { useState } from "react";
 
 import "./Qissa.scss";
 
+import video from "../../assets/images/qissa.mp4";
+
+import Speakers from "../../assets/Qissa/Qissa";
+
 //images
 import Logo from "../../assets/images/tedx_logo_small.png";
 import QissaBack from "../../assets/images/qissa_back.png";
+import QissaLogo from "../../assets/images/qissa_logo.png";
+import QissaMap from "../../assets/images/Qissa_map.png";
 
 import amaan from "../../assets/images/amaan.png";
 import siddhi from "../../assets/images/siddhi.png";
@@ -13,10 +19,7 @@ import ahlaya from "../../assets/images/ahlaya.png";
 import kabir from "../../assets/images/kabir.png";
 import shruti from "../../assets/images/shruti.png";
 import jannat from "../../assets/images/jannat.png";
-
-import video from "../../assets/images/qissa.mp4";
-
-import Speakers from "../../assets/Qissa/Qissa";
+const array = [jannat, siddhi, amaan, shruti, kabir, ahlaya, agrima];
 
 const Qissa = () => {
   const [selected, setSelected] = useState(0);
@@ -24,7 +27,7 @@ const Qissa = () => {
   return (
     <div className="qissa">
       <div className="qissa-container">
-        <h1 className="heading heading-primary">Qissa</h1>
+        <img src={QissaLogo} alt="qissa logo"></img>
         <h2 className="qissa-title">
           Come and Join us at the Canopies <br />
           23rd October, 07:00 PM
@@ -51,7 +54,7 @@ const Qissa = () => {
             <div className="banner-name">{Speakers[selected].name}</div>
             <h2 className="banner-title">{Speakers[selected].title}</h2>
             <p className="banner-description">
-              " {Speakers[selected].description} "
+              {Speakers[selected].description}
             </p>
             <h3 className="banner-tw">TW: {Speakers[selected].tw}</h3>
           </div>
@@ -59,98 +62,44 @@ const Qissa = () => {
 
         <div className="qissa-speakers">
           <div className="speakers-list">
-            <div
-              className="speaker-box"
-              style={{
-                backgroundImage: "url(" + jannat + ")",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-              onClick={() => {
-                setSelected(0);
-              }}
-            >
-              <span className="name">{"Jannat"}</span>
-            </div>
-            <div
-              className="speaker-box"
-              style={{
-                backgroundImage: "url(" + siddhi + ")",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-              onClick={() => {
-                setSelected(1);
-              }}
-            >
-              <span className="name">{"Siddhi"}</span>
-            </div>
-            <div
-              className="speaker-box"
-              style={{
-                backgroundImage: "url(" + amaan + ")",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-              onClick={() => {
-                setSelected(2);
-              }}
-            >
-              <span className="name">{"Amaan"}</span>
-            </div>
-            <div
-              className="speaker-box"
-              style={{
-                backgroundImage: "url(" + shruti + ")",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-              onClick={() => {
-                setSelected(3);
-              }}
-            >
-              <span className="name">{"Shruti"}</span>
-            </div>
-            <div
-              className="speaker-box"
-              style={{
-                backgroundImage: "url(" + kabir + ")",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-              onClick={() => {
-                setSelected(4);
-              }}
-            >
-              <span className="name">{"Kabir"}</span>
-            </div>
-            <div
-              className="speaker-box"
-              style={{
-                backgroundImage: "url(" + ahlaya + ")",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-              onClick={() => {
-                setSelected(5);
-              }}
-            >
-              <span className="name">{"Ahlaya"}</span>
-            </div>
-            <div
-              className="speaker-box"
-              style={{
-                backgroundImage: "url(" + agrima + ")",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-              onClick={() => {
-                setSelected(6);
-              }}
-            >
-              <span className="name">{"Agrima"}</span>
-            </div>
+            {Speakers.map((element, ind) => {
+              return (
+                <div
+                  className="speaker-box"
+                  style={{
+                    backgroundImage: "url(" + array[ind] + ")",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                  }}
+                  onClick={() => {
+                    setSelected(ind);
+                    document
+                      .querySelector(".qissa-speakers-heading")
+                      .scrollIntoView();
+                  }}
+                >
+                  <span
+                    className={`name`}
+                    style={
+                      element.name == "Jannat"
+                        ? { backgroundColor: "black", color: "white" }
+                        : element.name == "Shruti"
+                        ? { color: "white" }
+                        : element.name == "Amaan"
+                        ? { backgroundColor: "white" }
+                        : null
+                    }
+                  >
+                    {element.name}
+                  </span>
+                </div>
+              );
+            })}
           </div>
+        </div>
+        <div className="qissa-location">
+          <h1 className="heading qissa-speakers-heading">The Qissa Map</h1>
+          <img src={QissaMap} alt="map" />
         </div>
       </div>
     </div>

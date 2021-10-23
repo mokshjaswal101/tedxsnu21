@@ -20,7 +20,7 @@ const speakers = [
     title: "And Then I Met Misery",
     description:
       "“For everyone there is someone. We live on this sweet imagination. Whether that someone is an angel or a monster, we are yet to discover.”  Look towards your right, there’s a couple. They slam doors and argue all the time. Now look left, this couple’s perfect. You wouldn’t doubt a happily ever after. But what’s love in between? Or is any of this really love?",
-    image: "./assets/images/amaan.png",
+    image: "",
     tw: "Family issues, mentions of anxiety & depression",
   },
   {
@@ -40,7 +40,7 @@ const speakers = [
     tw: " Alcohol and substances, Chronic illness, Failing mental health",
   },
   {
-    name: "Ahlaya",
+    name: "Ahalya",
     title: " Still Here",
     description:
       "In abusive households, the methods of abuse may change, but the abuse itself never really fades. Still Here is a story about domestic violence spanning 17 years, and the long lasting psychological impacts of childhood abuse, emotional neglect and unsustainable expectations - common to many households, but seldom aired in the open. ",
