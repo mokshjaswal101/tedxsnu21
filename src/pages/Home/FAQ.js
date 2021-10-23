@@ -11,7 +11,7 @@ const FAQ = () => {
 
   return (
     <>
-      <main className="faq-main">
+      <main className="faq-main" id="faq">
         <div className="faq-information">
           <h1 className="heading heading-primary">FAQ's</h1>
           <ul>

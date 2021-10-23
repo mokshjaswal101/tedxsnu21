@@ -8,8 +8,7 @@
   position: fixed;
   background-color: white;
   padding: 2rem 0;
-  z-index: 1000;
-
+  z-index: 2;
   .nav-container {
     width: 80%;
     display: flex;
@@ -25,10 +24,6 @@
 
       @include respond(820px) {
         flex: 0 0.5 50%;
-      }
-
-      @include respond(620px) {
-        flex: 0 0.5 70%;
       }
 
       img {
@@ -61,27 +56,26 @@
           padding: 0;
         }
 
+        a {
+          color: var(--color-black-light);
+        }
+
         li {
           display: inline-block;
           margin: 0 1.3rem;
-          font-size: 1.5rem;
+          font-size: 2rem;
           cursor: pointer;
           transition: all 0.3s;
 
-          &:hover {
-            color: var(--color-secondary);
-          }
-
-          @include respond(960px) {
-            margin: 0 0.9rem;
-            font-size: 1.6rem;
-          }
-
           @include respond(820px) {
             display: block;
-            color: white;
+            color: #fff;
             margin: 2rem 0;
             font-size: 3rem;
+          }
+
+          &:hover {
+            color: var(--color-secondary);
           }
         }
 

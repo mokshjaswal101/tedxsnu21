@@ -1,7 +1,15 @@
+@import "../../assets/scss/abstract/mixins.scss";
+
 .contact {
+  margin: 5rem 0;
+
   .contact-container {
     display: flex;
     justify-content: space-between;
+
+    @include respond(550px) {
+      flex-direction: column-reverse;
+    }
 
     .contact-information {
       flex: 0 0 45%;
@@ -64,6 +72,10 @@
 
             &:last-of-type {
               width: 70%;
+
+              @include respond(550px) {
+                width: 90%;
+              }
             }
           }
 
@@ -82,6 +94,10 @@
 
       button {
         margin-top: 3rem;
+
+        @include respond(550px) {
+          margin-bottom: 4rem;
+        }
       }
     }
   }

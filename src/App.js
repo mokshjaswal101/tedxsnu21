@@ -13,14 +13,14 @@ import Qissa from "./pages/Qissa/Qissa";
 function App() {
   return (
     <>
-      <Navbar />
       <Router>
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route exact path="/qissa" component={Qissa}></Route>
         </Switch>
+        {/* <Footer /> */}
       </Router>
-      {/* <Footer /> */}
     </>
   );
 }
