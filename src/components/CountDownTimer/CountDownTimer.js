@@ -27,6 +27,9 @@ const CountDownTimer = () => {
     let seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
     setResult({ days, hours, minutes, seconds });
+    if (difference <= 0) {
+      setResult({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+    }
   }, [difference]);
 
   return result;
