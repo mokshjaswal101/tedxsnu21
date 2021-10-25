@@ -5,11 +5,24 @@
   position: relative;
   align-self: center;
 
+  @include respond(550px) {
+    padding: 0;
+  }
+
   p {
     max-width: 50%;
+    text-align: justify;
 
     @include respond(1050px) {
       max-width: 60%;
+    }
+
+    @include respond(700px) {
+      max-width: 70%;
+    }
+
+    @include respond(550px) {
+      max-width: 100%;
     }
   }
 
@@ -18,14 +31,18 @@
     border: 1px solid black;
     border-radius: 50%;
     position: absolute;
-    transform: translate(-25%, -20%);
+    transform: translate(-20%, -20%);
 
     @include respond(1050px) {
       transform: translate(-25%, -18%);
     }
 
-    // @include respond(750px) {
-    //   display: none;
-    // }
+    @include respond(620px) {
+      transform: translate(-30%, -16%);
+    }
+
+    @include respond(550px) {
+      display: none;
+    }
   }
 }

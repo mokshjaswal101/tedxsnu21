@@ -7,8 +7,10 @@ import Logo from "../../assets/images/tedx_snu_logo_black.png";
 
 const Contact = () => {
   return (
-    <section className="contact">
-      <h1 className="heading heading-primary">Contact</h1>
+    <section className="contact" id="contact">
+      <h1 className="heading heading-primary " id="contact">
+        Contact
+      </h1>
       <div className="contact-container">
         <div className="contact-information">
           <img src={Logo} alt="logo" />

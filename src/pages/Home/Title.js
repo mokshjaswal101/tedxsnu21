@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Title.scss";
 
@@ -36,7 +37,9 @@ const Title = () => {
             <span>Seconds</span>
           </div>
         </div>
-        <div className="btn btn-primary title-btn">Get Tickets</div>
+        <Link to="/qissa">
+          <button className="btn btn-primary title-btn">Qissa</button>
+        </Link>
         <div className="border-circle"></div>
       </section>
     </>

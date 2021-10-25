@@ -1,10 +1,21 @@
+@import "../../assets/scss/abstract/mixins.scss";
+
 .faq-main {
   display: flex;
-  padding-top: 10rem;
+  padding-top: 15rem;
   transition: all 0.4s;
+
+  @include respond(600px) {
+    flex-direction: column;
+  }
 
   .faq-information {
     flex: 0 0 30%;
+
+    @include respond(600px) {
+      flex: 1;
+      margin-bottom: 2rem;
+    }
 
     h1 {
       margin-top: 0;
@@ -14,12 +25,31 @@
       list-style: none;
       padding: 0 2rem;
 
+      @include respond(600px) {
+        padding: 0;
+      }
+
       li {
         font-size: 1.8rem;
         margin-bottom: 3rem;
         text-transform: uppercase;
         cursor: pointer;
         font-weight: bold;
+
+        @include respond(600px) {
+          display: inline;
+          margin-bottom: 0;
+          margin-right: 2rem;
+        }
+
+        @include respond(401px) {
+          font-size: 1.7rem;
+          margin-right: 1.5rem;
+        }
+
+        @include respond(350px) {
+          font-size: 1.4rem;
+        }
 
         &:hover {
           color: var(--color-secondary);
