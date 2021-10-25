@@ -10,13 +10,15 @@ import AboutTed from "./AboutTed";
 import Contact from "./Contact";
 import FAQ from "./FAQ";
 import Speakers from "./Speakers";
+
 const Home = () => {
   return (
     <div className="home">
       <div className="home-container">
         <Title id="title" />
         <About />
-        {/* <PastConference /> */}
+        <Speakers />
+        <PastConference />
         <FAQ />
         <AboutTed id="aboutted" />
         <Contact />
