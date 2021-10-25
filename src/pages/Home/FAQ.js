@@ -19,7 +19,7 @@ const FAQ = () => {
               return (
                 <li
                   key={e}
-                  className={active == e ? "active" : <></>}
+                  className={active === e ? "active" : <></>}
                   onClick={() => {
                     setActive(e);
                   }}
