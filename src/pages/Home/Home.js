@@ -5,7 +5,6 @@ import "./Home.scss";
 //Sections
 import Title from "./Title";
 import About from "./About";
-import PastConference from "./PastConference";
 import AboutTed from "./AboutTed";
 import Contact from "./Contact";
 import FAQ from "./FAQ";
@@ -18,7 +17,7 @@ const Home = () => {
         <Title id="title" />
         <About />
         <Speakers />
-        <PastConference />
+        {/* <PastConference /> */}
         <FAQ />
         <AboutTed id="aboutted" />
         <Contact />

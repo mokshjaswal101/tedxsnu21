@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { toast, ToastContainer } from "react-toastify";
+
 import "./Title.scss";
 
 //components
@@ -14,32 +16,34 @@ const Title = () => {
 
   return (
     <>
+      <ToastContainer />
       <section className="section-title">
         <img src={Rewire} alt="rewire" />
         <div className="time">
           <div className="days">
-            {days}
+            {days == -1 ? "0" : days}
             <span>days</span>
           </div>
           <div className="colon">:</div>
           <div className="hours">
-            {hours}
+            {hours == -1 ? "0" : hours}
             <span>Hours</span>
           </div>
           <div className="colon">:</div>
           <div className="minutes">
-            {minutes}
+            {minutes == -1 ? "0" : minutes}
             <span>Minutes</span>
           </div>
           <div className="colon">:</div>
           <div className="seconds">
-            {seconds}
+            {seconds == -1 ? "0" : seconds}
             <span>Seconds</span>
           </div>
         </div>
-        <Link to="/qissa">
-          <button className="btn btn-primary title-btn">Qissa</button>
+        <Link to="/tickets">
+          <button className="btn btn-primary title-btn">Get Tickets</button>
         </Link>
+
         <div className="border-circle"></div>
       </section>
     </>

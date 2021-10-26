@@ -1,12 +1,18 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router";
 import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
 
 import Logo from "../../assets/images/tedx_snu_logo_black.png";
+import { toast } from "react-toastify";
+
+import CountDownTimer from "../CountDownTimer/CountDownTimer";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
+
+  const { days, hours, minutes, seconds } = CountDownTimer();
 
   const check = () => {
     if (document.querySelector(".navbar-mobile"))
@@ -33,15 +39,9 @@ const Navbar = () => {
             <a href="/#about" onClick={check}>
               <li>The Conference</li>
             </a>
-            {/* <Link to="">
-              <li>Presenters</li>
-            </Link> */}
-            {/* <Link>
-              <li>Partners</li>
-            </Link> */}
-            {/* <Link>
-              <li>Past Conference</li>
-            </Link> */}
+            <a href="/#speakers" onClick={check}>
+              <li>Speakers</li>
+            </a>
             <a href="/#faq" onClick={check}>
               <li>FAQ</li>
             </a>
@@ -49,7 +49,12 @@ const Navbar = () => {
               <li>Contact</li>
             </a>
             <Link to="/qissa" onClick={check}>
-              <li id="navbar-tickets">Qissa</li>
+              <li>Qissa</li>
+            </Link>
+            <Link to="/tickets">
+              <li onClick={check} id="navbar-tickets">
+                Tickets
+              </li>
             </Link>
           </ul>
         </div>

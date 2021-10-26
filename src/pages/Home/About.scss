@@ -9,6 +9,14 @@
     padding: 0;
   }
 
+  @include respond(1250px) {
+    padding: 20rem 0 10rem 0;
+  }
+
+  @include respond(550px) {
+    padding: 0;
+  }
+
   p {
     max-width: 50%;
     text-align: justify;
